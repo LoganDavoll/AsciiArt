@@ -15,12 +15,16 @@ public class NameProcessor {
         
         Scanner sc = new Scanner(System.in);
         
-        System.out.print("Please enter your name: ");
+        System.out.print("Type your name: ");
         String fullName = sc.nextLine();
         
-        char firstIn = fullName.charAt(0);
-        System.out.println(firstIn);
+        System.out.println(fullName.indexOf(" "));
         
+        char firstIn = fullName.charAt(0);
+        
+        String result = fullName.substring(fullName.indexOf(" ")+1);
+        
+        System.out.println("Your name is: "+ result +", "+ firstIn +".");
     }
     
 }
